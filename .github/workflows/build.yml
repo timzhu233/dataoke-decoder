@@ -25,10 +25,10 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller --onefile --console --name main2 main2.py
+          pyinstaller --onefile --windowed --name "大淘客加密商品ID解密工具" --collect-all openpyxl --hidden-import openpyxl taoke_decoder.py
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: main2-windows
-          path: dist/main2.exe
+          name: 大淘客加密商品ID解密工具-windows
+          path: dist/*.exe
